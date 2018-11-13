@@ -13,7 +13,14 @@ while(answer != 'quit'){
 	}
 
 	else if(answer == 'list'){
-		alert(todo_list);
+		todo_list.forEach(function(todo, index){
+			console.log(index + ": " + todo)
+		});
+	}
+
+	else if(answer === 'delete'){
+		index = prompt('What is the index of the item you want to delete?')
+		todo_list.splice(index,1);
 	}
 }
 	
