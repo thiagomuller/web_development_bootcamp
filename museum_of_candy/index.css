@@ -1,0 +1,56 @@
+body{
+	background-color: #f4a9eb;
+}
+
+#mainNavbar{
+	background-color: #f4a9eb;
+}
+
+#mainNavbar .navbar-brand{
+	color: #ea1c2c;
+	font-size: 1.5rem;
+	font-weight: 100;
+	font-family: 'Pacifico', cursive;
+}
+
+#mainNavbar .nav-link{
+	color: white;
+	font-family: 'Pacifico', cursive;
+}
+
+#mainNavbar .nav-link:hover{
+	color: #ea1c2c;
+}
+
+h1{
+	font-weight: 100;
+	color: #ea1c2c;
+	font-family: 'Dancing Script', cursive;
+	font-size: 4rem;
+}
+
+p{
+	font-family: 'Dancing Script', cursive
+}
+
+.srow{
+	margin-top: 100px;
+}
+
+.img-fluid{
+	border-radius: 8px;
+}
+
+
+@media(max-width:1200px){
+	h1{
+	font-weight: 100;
+	color: #ea1c2c;
+	font-family: 'Dancing Script', cursive;
+	font-size: 2rem;
+	}
+
+	.srow{
+		margin: 0px;
+	}
+}
