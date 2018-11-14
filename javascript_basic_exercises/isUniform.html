@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>isUniformExercise</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		function user_entry(){
+			var qty;
+			var lqty;
+			var arr= [];
+			qty = prompt('How many positions there will be in your array?');
+
+			for(var i=0; i<qty; i++){
+				lqty = prompt('Which is the ' + i + 'st array value?');
+				arr[i] = lqty
+			}
+
+			return arr;
+		}
+
+		function isUniform(arr){
+			var firstIndex = arr[0]
+			var uniform = true;
+			arr.forEach(function(x){
+				if(firstIndex != x){
+					uniform = false;
+				}
+			})
+
+			if(uniform === true){
+				alert('It\'s Uniform');
+			}
+
+			else{
+				alert('It\'s isn\'t uniform');
+			}
+		}
+
+		arr = user_entry();
+		isUniform(arr);
+	</script>
+
+</body>
+</html>

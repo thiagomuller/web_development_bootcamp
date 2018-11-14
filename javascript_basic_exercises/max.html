@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>max</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		function max(){
+			var qty;
+			var lqty = 0;
+			var arr= [];
+			var max = 0;
+			qty = parseInt(prompt('How many positions there will be in your array?'));
+
+			for(var i=0; i<qty; i++){
+				lqty = parseInt(prompt('Which is the ' + i + 'st array value?'));
+				arr[i] = lqty;
+			}
+
+			for(var i=0; i<qty; i++){
+				if(arr[i] > arr[i-1]){
+					max = arr[i];
+				}
+			}
+
+			alert(max);
+		}
+
+
+		arr = max();
+	</script>
+
+</body>
+</html>

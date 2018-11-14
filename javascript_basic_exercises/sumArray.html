@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sumArray</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		function user_entry(){
+			var qty;
+			var lqty = 0;
+			var arr= [];
+			qty = parseInt(prompt('How many positions there will be in your array?'));
+
+			for(var i=0; i<qty; i++){
+				lqty = parseInt(prompt('Which is the ' + i + 'st array value?'));
+				arr[i] = lqty
+			}
+
+			return arr;
+		}
+
+		function sumArray(arr){
+			var total = 0;
+			arr.forEach(function(x){
+				total = total + x;
+			})
+
+			alert(total);
+		}
+
+		arr = user_entry();
+		sumArray(arr);
+	</script>
+
+</body>
+</html>

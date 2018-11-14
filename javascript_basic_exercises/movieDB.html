@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>movieDB_exercise</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		movies = [
+			lesMiserables = {
+				title : "Les Miserables",
+				rating :  "5 Stars",
+				hasWatched : true
+			},
+			lastSamurai = {
+				title : "The Last Samurai",
+				rating : "5 Stars",
+				hasWatched : true
+			},
+			madMax = {
+				title : "Mad Max Fury Road",
+				rating : "4.5 Stars",
+				hasWatched : false
+			}
+		]
+
+		movies.forEach(function(movie){
+			if(movie.hasWatched === true){
+				alert("You have watched " + movie.title + " - " + movie.rating);
+			}
+
+			else{
+				alert("You haven't watch " + movie.title + " - " + movie.rating);
+			}
+		})
+	</script>
+
+</body>
+</html>

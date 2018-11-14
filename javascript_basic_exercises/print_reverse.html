@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print reverse exercise</title>
+</head>
+<body>
+	<script>
+
+		function user_entry(){
+			var qty;
+			var lqty;
+			var arr= [];
+			qty = prompt('How many positions there will be in your array?');
+
+			for(var i=0; i<qty; i++){
+				lqty = prompt('Which is the ' + i + 'st array value?');
+				arr[i] = lqty
+			}
+
+			return arr;
+		}
+
+		function print_reverse(arr){
+			var rev_arr = []
+			arr.forEach(function(x){
+				rev_arr.unshift(x);
+			})
+
+			rev_arr.forEach(function(x){
+				console.log(x)
+			})	
+
+		}
+
+
+		arr = user_entry();
+		print_reverse(arr);
+	</script>
+</body>
+</html>
