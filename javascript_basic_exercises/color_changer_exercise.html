@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color changer exercise</title>
+
+	<style type="text/css">
+		.btn-changer{
+			background-color: purple;
+			width: 25%;
+			height: 150px;
+		}	
+	</style>
+
+</head>
+<body>
+
+<div>
+<button>Click me!</button>
+</div>
+
+
+<script type="text/javascript">
+	btn = document.querySelector("div");
+	btn.addEventListener("click",function(){
+		btn.classList.toggle("btn-changer");
+	})
+</script>
+
+</body>
+</html>
