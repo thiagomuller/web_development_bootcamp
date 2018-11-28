@@ -65,13 +65,11 @@ function setH1(winColor){
 setSquares();
 winColor = pickWinColor(window.gameMode);
 setH1(winColor);
-console.log("The win Color I've got right at the beginning is " + winColor);
 
 
 for(i = 0; i < squares.length; i++){
 		squares[i].addEventListener("click", function(){
 			var pickedColor = this.style.backgroundColor;
-			console.log("I'm the square listener, and the pickedColor you chose was " + pickedColor);
 			if(pickedColor != winColor){
 				this.style.background = "#232323";
 			}
