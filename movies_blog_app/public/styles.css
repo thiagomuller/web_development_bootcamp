@@ -1,0 +1,29 @@
+body{
+    padding-top: 70px;
+}
+
+.show-title{
+    font-family: 'Lobster', cursive;
+}
+
+.show-text{
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+}
+
+.show-span{
+    color: black;
+}
+
+#new-form{
+    width: 30rem;
+}
+
+form .edit-form{
+    display: inline;
+    width: 30rem;
+}
+
+#delete-form{
+    display: inline;
+}

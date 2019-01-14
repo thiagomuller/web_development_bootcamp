@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Flexbox</title>
+
+	<style type="text/css">
+		.container{
+			margin-top: 50px;
+			padding: 20px 0;
+			background-color: coral;
+			display: flex; /* makes the container flexible, allowing all the below properties to be applied */
+			flex-direction: row; /* Determines wheter the main axis gonna be x or y */
+			flex-wrap: nowrap; /* Determines wheter the items will still be wraped inside container when the screen goes lower or not */
+			align-items: center; /* Determines the direction of the items in the cross axis, which is y for flex-direction: row and x for flex-direction: column; */
+			justify-content: space-between;  /* Determines the direction of the items in the main axis, which is x axis for flex-direction: row and y on flex-direction: column; */
+			height: 700px;
+		}
+
+		.item{
+			padding: 30px;
+			margin: 10px;
+			background-color: #777;
+			text-align: center;
+			font-size: 30px;
+			color: #fff;
+		}
+
+		.item1{
+			order: 1; /* Items order goes from the lowest value to the highest*/
+			flex-grow: 0;
+			flex-basis: auto;
+		}
+
+		.item5{
+			width: 200px; /* This is overwritten when flex-basis is used */
+			order: -1; /* Ordering something as a negative value gives it the highest priority */
+			flex-basis: 100px;  /* Flex basis doesn't not just adjust item width, but it changes its side depending on which axis is the main, which comes from flex-direction property on container */
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item item1">A</div>
+		<div class="item item2">B</div>
+		<div class="item item3">C</div>
+		<div class="item item4">D</div>
+		<div class="item item5">E</div>
+	</div>
+
+
+
+</body>
+</html>

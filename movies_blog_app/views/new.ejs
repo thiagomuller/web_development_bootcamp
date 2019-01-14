@@ -1,0 +1,37 @@
+<% include partials/header.ejs %>
+    
+    <div class='container'>
+        <div class='row'>
+            <div class='col-lg-12 d-flex justify-content-center'>
+                <h1 class='text-muted'>Search your Movie!</h1>
+            </div>
+            <div class='col-lg-12 d-flex justify-content-center'>
+                <form action='/find' method='POST'>
+                  <div class="form-group">
+                    <input name='searchTerm' type="text" id='new-form' class="form-control mt-3" placeholder="Enter your movie">
+                  </div>
+                  <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                </form>
+            </div>
+            <% if(result){ %>
+                <% result.Search.forEach(function(movie){ %>
+                    <div class='col-lg-4 mt-3'>
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top" src="<%= movie.Poster %>" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title"><%= movie.Title %></h5>
+                            <p class="card-text"><%= movie.Plot %></p>
+                            <div class='newItemDivs' name='movieID' value='<%= movie.imdbID %>'>
+                                <button type='submit' class='btn btn-primary newItemBtn'>Add as a post</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+    </div>
+    
+    
+    
+<%include partials/footer.ejs %>

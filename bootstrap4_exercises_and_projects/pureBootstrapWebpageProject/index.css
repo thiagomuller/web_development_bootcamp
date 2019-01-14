@@ -1,0 +1,23 @@
+#bannerContainer{
+	height: 100vh;
+}
+
+div .card img{
+	height: 35rem;
+}
+
+#htmlProgressBar{
+	width: 50%;
+}
+
+#jsProgressBar{
+	width: 35%;
+}
+
+#pyProgressBar{
+	width: 60%;
+}
+
+#footer{
+	background-color: #acadb4;
+}

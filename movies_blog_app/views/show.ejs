@@ -1,0 +1,80 @@
+<% include partials/header.ejs %>
+    
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-sm-4'>
+                <div class='d-flex justify-content-center'>
+                    <h1 class='display-4 show-title d-block'>Comments</h1>
+                </div>
+                <% if(currentUser) { %>
+                    <div class='d-flex justify-content-center show-text mt-5'>
+                        <h3 class='d-block'>Write a new comment</h3>
+                    </div>
+                        <form class='show-text mt-4 comment-form' action='/posts/<%= post._id %>/comment/new' method='POST'>
+                            <div class='row'>
+                                <div class='col-sm-3'>
+                                    Comment:
+                                </div>
+                                <div class='col-sm-9 mt-2'>
+                                    <textarea rows='4' cols='25' name='comment[text]' placeholder='your comment' required></textarea> 
+                                </div>
+                                <div class='col-sm-3'>
+                                </div>
+                                <div class='col-sm-9 mt-3'>
+                                    <button type='submit' class='btn btn-outline-primary'>Submit Comment</button>
+                                </div>
+                            </div>
+                        </form>
+                
+                    <% } %>
+                    
+                    <div class='mt-5 d-flex justify-content-center'>
+                        <div class='row'>
+                            <% post.comments.forEach(function(comment){ %>
+                                <div class='col-sm-12 d-flex justify-content-center mt-3'>
+                                    <div class="card show-text bg-dark text-white" style="width: 18rem;">
+                                      <div class="card-body">
+                                        <h5 class="card-title"><strong><%= comment.author %></h5></strong>
+                                        <p class="card-text"><%= comment.text %></p>
+                                        <a href="#" class="card-link btn btn-warning">Edit</a>
+                                        <a href="#" class="card-link btn btn-danger">Delete</a>
+                                      </div>
+                                    </div>
+                                </div>
+                             <% }); %>
+                         </div>
+                    </div>
+            </div>
+            <div class='col-sm-8'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-sm-12'>
+                            <div class='d-flex justify-content-center'>
+                                <h1 class='display-4 show-title d-block'>
+                                    <%= post.Title %>
+                                </h1>
+                            </div>
+                            <div class='d-flex justify-content-center mt-3'>
+                                <img src='<%= post.Image %>'>
+                            </div>
+                            <div class='text-muted show-text'>
+                                <p><span class='show-span'>Year :</span> <%= post.Year %></p>
+                                <p><span class='show-span'>Director :</span> <%= post.Director %></p>
+                                <p><span class='show-span'>Writers :</span> <%= post.Writers %></p>
+                                <p><span class='show-span'>Actors :</span> <%= post.Actors %></p>
+                                <p><span class='show-span'>Plot :</span> <%= post.Plot %></p>
+                                <p><span class='show-span'>IMDB Rating :</span> <%= post.imdbRating %></p>
+                                <p><span class='show-span'>Rotten Tomatoes Rating :</span> <%= post.Rating['Rotten Tomatoes'] %></p>
+                                <p><span class='show-span'>Metacritic Rating :</span> <%= post.Rating['Metacritic'] %></p>
+                                
+                                <a class='btn btn-primary' href='/posts'>Go back!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH=/home/thiago/Documents/web_development_bootcamp/web_development_bootcamp/movies_app/env/lib/node_modules
+export NPM_CONFIG_PREFIX=/home/thiago/Documents/web_development_bootcamp/web_development_bootcamp/movies_app/env
+export npm_config_prefix=/home/thiago/Documents/web_development_bootcamp/web_development_bootcamp/movies_app/env
+exec env/bin/node "$@"

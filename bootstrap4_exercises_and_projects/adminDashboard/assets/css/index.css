@@ -1,0 +1,232 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	background-color: #eee;
+}
+
+/*Navbar*/
+.sidebar{
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,7), rgba(0,0,0,.3)),url(images/img1.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 5px 7px 25px #999;
+}
+/*End of navbar*/
+
+.bottom-border{
+	border-bottom: 1px groove #eee;
+}
+
+.sidebar-link{
+	transition-property: background-color,border-radius,box-shadow;
+	transition-duration: 0.9s;
+	transition-timing-function: linear;
+}
+
+.sidebar-link:hover{
+	background-color: #444;
+	border-radius: 5px;
+	box-shadow: 2px 5px 20px #111;
+}
+
+.current{
+	background-color: #f44336;
+	border-radius: 7px;
+	box-shadow: 2px 5px 10px #111;
+	transition: all .6s;
+}
+
+.current:hover{
+	background-color: #f66436;
+	border-radius: 7px;
+	box-shadow: 2px 5px 20px #111;
+	transform: translate(-1px);
+}
+
+.search-input{
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	transition: all 0.9;
+}
+
+.search-input:focus{
+	background: transparent;
+	box-shadow: none;
+	border-bottom: 2px solid #7e89d1;
+	color: white;
+}
+
+.search-button{
+	transition-property: background-color;
+	transition-duration: .4s;
+}
+
+.search-button:hover{
+	background-color: #7e89d1;
+}
+
+.close{
+	transition-property: background-color,border-radius;
+	transition-duration: .6s;
+}
+
+.close:hover{
+	background-color: #7e89d1;
+	border-radius: 5px;
+}
+
+#sign-out-link{
+	border: none;
+}
+
+#sign-out-link:hover{
+	background-color: #7e89d1;
+	border-radius: 5px;
+	color: white;
+}
+
+#sign-out-link:focus{
+	outline: none;
+}
+
+
+#fa-bell-link{
+	border: none;
+}
+
+#fa-bell-link:hover{
+	background-color: #7e89d1;
+	border-radius: 5px;
+	color: white;
+}
+
+#fa-bell-link:focus{
+	outline: none;
+}
+
+#fa-comments-link{
+	border: none;
+}
+
+#fa-comments-link:hover{
+	background-color: #7e89d1;
+	border-radius: 5px;
+	color: white;
+}
+
+#fa-comments-link:focus{
+	outline: none;
+}
+
+/*Cards*/
+.card-custom{
+	box-shadow: 1px 2px 5px #999;
+	transition: all .6s;
+}
+
+.card-custom:hover{
+	box-shadow: 2px 3px 15px #999;
+	transform: translate(-1px);
+}
+
+
+/*End of cards*/
+
+.my-badge{
+	display: inline-block;
+	background-color: #28a745;
+	color: white;
+	width: 100px;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 75%;
+	padding: 7px 30px 7px 18px;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: center;
+}
+
+.my-badge-danger{
+	display: inline-block;
+	background-color: #dc3545;
+	color: white;
+	width: 100px;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 75%;
+	padding: 7px 19px 7px 18px;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: center;
+}
+/*Task list*/
+.task-border{
+	border-left: 3px solid #f66436;
+}
+/*End of task list*/
+
+/*Clock and calendar fa icons*/
+.my-calendar{
+	font-size: 130px;
+}
+
+.my-clock{
+	font-size: 130px;
+}
+/*End of clock and calendar fa icons*/
+
+@media only screen and (max-width: 970px) {
+    #dash {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #fa-comments, #fa-bell, #fa-sign-out-alt {
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 768px){
+	.sidebar{
+		position: static;
+		height: auto;
+	}
+
+	.top-navbar{
+		position: static;
+	}
+}
+
+@media(max-width: 758px){
+	.my-badge{
+		width: 75px;
+		text-align: center;
+		padding: 3px 15px 3px 8px;
+		font-size: 65%;
+	}
+
+	.my-badge-danger{
+		width: 75px;
+		text-align: center;
+		font-size: 65%;
+		padding: 3px 8px 3px 8px;
+	}
+}
+
+@media(max-width: 544px){
+	.my-calendar{
+		font-size: 80px;
+	}
+
+	.my-clock{
+		font-size: 80px;
+	}
+}
+
+
+
